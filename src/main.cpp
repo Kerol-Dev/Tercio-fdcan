@@ -70,9 +70,6 @@ static void sendCanFromUsbFrame(const uint8_t *frame) {
   const uint32_t st = fdcan1.tryToSendReturnStatusFD(m);
   if (st == 0) {
     ledTx.pulse();
-  } else {
-    // TX error
-    Serial.print("CAN TX error 0x"); Serial.println(st, HEX);
   }
 }
 
@@ -185,11 +182,9 @@ void setup() {
   uint32_t err = fdcan1.beginFD(settings);
   if (err != 0) {
     Serial.print("FDCAN init error: 0x"); Serial.println(err, HEX);
-    // keep running; USB bridge will still accept input even if CAN failed
+  } else {
+    Serial.println("FDCAN initialized");
   }
-
-  Serial.println("USB<->CAN-FD bridge ready");
-  Serial.println("Frame: ID_L, ID_H, CMD, LEN (0..32), PAYLOAD[LEN]");
 }
 
 void loop() {
