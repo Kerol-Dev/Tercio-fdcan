@@ -7,7 +7,7 @@
 
 [![License](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 [![Documentation](https://img.shields.io/badge/Docs-terciolabs.com-green)](https://docs.terciolabs.com)
-[![Hardware](https://img.shields.io/badge/Hardware-TercioLabs-orange)](https://terciolabs.com)
+[![Hardware](https://img.shields.io/badge/Hardware-TercioLabs-orange)](https://terciolabs.com/product/tercio-fdcan)
 
 </div>
 
@@ -16,7 +16,7 @@
 ## Hardware Availability
 
 This repository contains the firmware source code for the Tercio FD Adapter.
-**Official hardware is available for purchase at [terciolabs.com](https://terciolabs.com).**
+**Official hardware is available for purchase at [terciolabs.com](https://www.terciolabs.com/product/tercio-fdcan)**
 
 ---
 
@@ -31,36 +31,6 @@ Designed for low latency and high reliability, it is the required interface for 
 * **USB Connectivity:** Seamless plug-and-play connection to PC/Mac/Linux.
 * **Low Latency:** Optimized packet forwarding for real-time robotics control.
 * **Ecosystem Integration:** Natively supported by the Tercio Web GUI for motor configuration and tuning.
-
----
-
-## 🛠️ Development & Flashing
-
-### Hardware Requirements
-To develop or flash firmware on the Tercio FD, you will need:
-1.  **Tercio FD Adapter**
-2.  **ST-Link V2/V3 Programmer** (for flashing via SWD)
-3.  **Wiring:** SWD connections (SWDIO, SWCLK, GND, 3V3)
-
-### Development Environment
-You can build and flash this project using either **PlatformIO** (VSCode) or **STM32CubeIDE**.
-
-#### Option A: PlatformIO (Recommended)
-1.  Install [Visual Studio Code](https://code.visualstudio.com/) and the **PlatformIO** extension.
-2.  Clone this repository:
-    ```bash
-    git clone [https://github.com/Kerol-Dev/Tercio-fdcan.git](https://github.com/Kerol-Dev/Tercio-fdcan.git)
-    ```
-3.  Open the project folder in PlatformIO.
-4.  Connect your ST-Link to the Tercio FD board via the SWD headers.
-5.  Click the **PlatformIO: Upload** button (arrow icon) to build and flash.
-
-#### Option B: STM32CubeIDE
-1.  Open **STM32CubeIDE**.
-2.  Select `File > Open Projects from File System...` and navigate to the repository folder.
-3.  Connect your ST-Link to the board.
-4.  Build the project (Hammer icon).
-5.  Run/Debug (Play/Bug icon) to flash the firmware.
 
 ---
 
