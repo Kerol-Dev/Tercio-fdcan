@@ -87,7 +87,7 @@ flowchart LR
 ```python
 from TercioBridge import Bus
 
-with Bus("COM5") as bus:            # or "/dev/ttyACM0", "/dev/cu.usbmodem…"
+with Bus() as bus:                  # finds the adapter by its USB ID, or Bus("COM5")
     print(bus.adapter_info())       # firmware, hardware revision, clock, unique ID
     for node in bus.discover():     # every S1 and IMU on the bus
         print(node)
